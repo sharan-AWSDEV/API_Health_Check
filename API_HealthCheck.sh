@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bassh
 #Get IP address as input parameter
 ip_address="$1"
 endpoints="
