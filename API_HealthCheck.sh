@@ -17,7 +17,7 @@ if [ -z "$ip_address" ]; then
   exit 1
 fi
 for endpoint in $endpoints; do
-  response=$(curl -sSL "$endpoint")
+ response=$(curl -sSL "$endpoint")
     #To check response of endpoint links
     if echo "$response" | grep -q "status\":\"UP\""; then
     echo "Service at $endpoint is healthy."
