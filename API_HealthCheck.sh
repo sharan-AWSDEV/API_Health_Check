@@ -1,4 +1,4 @@
-#!/bin/bassh
+#!/bin/bash
 #Get IP address as input parameter
 ip_address="$1"
 endpoints="
@@ -16,7 +16,8 @@ if [ -z "$ip_address" ]; then
   echo "Please provide an IP address as an argument."
   exit 1
 fi
-for endpoint in $endpoints; do
+for endpoint in $endpoints; 
+do
  response=$(curl -sSL "$endpoint")
     #To check response of endpoint links
     if echo "$response" | grep -q "status\":\"UP\""; then
